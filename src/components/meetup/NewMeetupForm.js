@@ -7,13 +7,14 @@ function NewMeetupForm(props) {
     const imageInputRef = useRef();
     const addressInputRef = useRef();
     const descriptionInputRef = useRef();
+
     function submitHandler(event){
         event.preventDefault();
 
-        const enteredTitle = titleInputRef.current.valueOf();
-        const enteredImage = imageInputRef.current.valueOf();
-        const enteredAddress = addressInputRef.current.valueOf();
-        const enteredDescription = descriptionInputRef.current.valueOf();
+        const enteredTitle = titleInputRef.current.value;
+        const enteredImage = imageInputRef.current.value;
+        const enteredAddress = addressInputRef.current.value;
+        const enteredDescription = descriptionInputRef.current.value;
 
         const meetupData = {
             title : enteredTitle,
